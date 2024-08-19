@@ -1,0 +1,185 @@
+#https://github.com/Pooja7720/Data-Science---Class-Notes/blob/main/Day_9%20Sets.ipynb
+
+
+#myInt=5;
+#print (myInt);
+
+#myList=[1,"hi",False, 3.2]
+#print(myList[-1:-4:-1])
+
+#myStr="Hi"
+#print(myStr + "Mrithi")
+
+# def power(num,x):
+#     res =1 
+#     for i in range(x):
+#         res=res*num
+#     return res
+
+# print (power(3,2))
+
+#Dict = {'Tim': 18,'Tim':12,'Tiffany':22,'Robert':25}   
+#print (Dict['Tim'])
+
+#"Fav":('Books','Games',4), "Food":["Veg", "Non-veg", 7.2, True] }
+
+dict ={"Name":"Kousalya", "Age":40}
+print(dict['Name'])
+print(dict.get("Name"))
+#print(dict.update({'Name':'Devi'}))
+#print(dict.items()) #The items() method will return each item in a dictionary, as tuples in a list res: [('Name:'Kousalya'), ('Age':40)]
+#print(dict.keys()) res: ['Name','Age']
+#print(dict.values()) res: ['Kousalya', 40]
+#print( len(dict))
+
+
+# Getting both keys and values using for loop
+#for k,v in dict.items():
+    #print(k ,":", v)
+
+#print ( 'Name' in dict.keys()) 
+#print ('Devi' in dict.values()) 
+
+#setdefault 
+#If the key is already available then the function returns the corresponding value.
+#If the key is not available then the specified key-value will be added as new item to the dictionary.
+#The output of this function is value at the specified key.
+
+#d.setdefault(k,v)
+#print(dict.setdefault('Location','USA')) #res: {'Name': 'Kousalya', 'Age': 40, 'Location': 'USA'}
+
+#print(dict.setdefault("Name","Devi")) #res: Kousalya 
+#print(dict)
+
+#print(dict.pop('Age'))  
+#print(dict)
+
+
+#print( dict.update({'Company':'Net'}))
+#print(dict.setdefault('phone', 4695702055))
+#print(dict)
+
+#dict["Kids"] = 2
+#print (dict)
+
+#pop(key) The pop() method removes the item with the specified key name and It removes the entry associated with the specified key and returns the corresponding value.
+#print(dict.pop('Name')) #res: Kousalya
+
+#print(dict.pop()) #TypeError: pop expected at least 1 argument, got 0
+
+#print (dict)
+#popitem
+#print(dict.popitem()) #The popitem() method removes the last inserted item
+#del
+
+#del dict['Age']
+#print (dict) #{'Name': 'Kousalya'}
+
+##del dict  
+#print (dict)
+
+
+#clear
+
+#info ={"Name":"Kousalya", "Age":40}
+
+##dict2 = info.copy()
+#print(dict2.clear()) #res : None
+
+
+
+
+#here are ways to make a copy, one way is to use the built-in Dictionary method copy().
+#Another way to make a copy is to use the built-in function dict().
+#The main drawback of copy function is that, you can not copy a single key value pair in a dictionary, it is used to copy a whole dictionary to another.
+
+#copy()
+
+#dict4= dict.copy()
+#print (dict4)
+#dict()
+#dict3 = dict(info)
+#print (dict3)
+
+
+##Nested dictionary:
+
+# myfamily ={
+#    "child1": {
+#        "Name": "Mrithika",
+#        "Age": 14
+
+#     },
+#     "child2":{
+#         "Name":"Avnish",
+#         "Age": 12
+#     }
+# }
+
+# print (myfamily)
+
+
+# child1={"name":"Emil","year":2004}
+# child2={"name":"Tobias","year":2007}
+# child3={"name":"Linus","year":2011}
+# myfamily={
+#     "child1":child1,
+#     "child2":child2,
+#     "child3":child3
+# }
+# print(myfamily)
+
+
+# d={}
+# n = int (input("Enter number of students:"));
+# i=1 
+# while i<=n:
+#     name = input ("Enter Name:")
+#     mark = input ("Enter mark")
+#     d[name]=mark 
+#     i+=1
+# print (d)    
+
+
+# rec = {}
+# n = int(input("Enter the number of students: "))
+# i = 1
+# while i<=n:
+#     name = input("Enter student name: ")
+#     marks = input("Enter student marks: ")
+#     rec[name] = marks
+#     i+=1
+# print(rec)
+# print("#"*40)
+# print()
+# print("Name of Student\t","% of Marks")
+# print("*"*40)
+# for k,v in rec.items():
+#     print(k,"\t\t",v)
+
+
+# square of  n number 
+
+# n = int(input("Enter number :"))
+# squares = {i : i*i for i in range(1,n)}
+# print (squares)
+
+
+# l =[1,2,3,4,5]
+# doubles = { i:i*i for i in l}
+# print (doubles)
+
+#Write a program to find number of occurrences of each letter present in the given string
+
+d={}
+word = str(input ("Enter the word:  "))
+print (word)
+for each_letter in word:
+    if each_letter in d: 
+      d[each_letter] += 1
+    else:
+        d[each_letter] = 1
+
+print (d)    
+
+
